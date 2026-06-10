@@ -29,7 +29,7 @@ function gotham_air_child_setup() {
 add_action( 'after_setup_theme', 'gotham_air_child_setup' );
 //Se agregan recursos CSS & JS del tema hijo.
 function gotham_air_child_head() {
-  $versionFiles = '1.0.2';
+  $versionFiles = '1.0.7';
   wp_enqueue_style( 'google-gotham-air-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:wght@100..900&display=swap', array(), null );
   // CSS
   wp_enqueue_style('bootstrap.min',  get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), $versionFiles);

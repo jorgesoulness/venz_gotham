@@ -22,8 +22,8 @@
           <div class="row align-items-center">
             <div class="col-5 col-md-3">
               <div class="logo">
-                <a href="index.html">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
+                <a href="#">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gotham_air_hori_logo.svg" alt="Gotham Air">
                 </a>
               </div>
             </div>
@@ -31,72 +31,72 @@
               <nav class="main-menu menu-sticky1 d-none d-lg-block">
                 <ul>
                   <li class="menu-item-has-children">
-                    <a href="index.html">Home</a>
+                    <a href="#">Home</a>
                     <ul class="sub-menu">
-                      <li><a href="index.html">Home Style 1</a></li>
-                      <li><a href="index-2.html">Home Style 2</a></li>
-                      <li><a href="index-3.html">Home Style 3</a></li>
+                      <li><a href="#">Home Style 1</a></li>
+                      <li><a href="#">Home Style 2</a></li>
+                      <li><a href="#">Home Style 3</a></li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="about.html">About Us</a>
+                  <!-- <li>
+                    <a href="#">About Us</a>
                   </li>
                   <li class="menu-item-has-children">
-                    <a href="service.html">Services</a>
+                    <a href="#">Services</a>
                     <ul class="sub-menu">
-                      <li><a href="service.html">Services</a></li>
-                      <li><a href="service-details.html">Service Details</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Service Details</a></li>
                     </ul>
                   </li>
                   <li class="menu-item-has-children mega-menu-wrap">
                     <a href="#">Pages</a>
                     <ul class="mega-menu">
-                      <li><a href="shop.html">Pagelist 1</a>
+                      <li><a href="#">Pagelist 1</a>
                         <ul>
-                          <li><a href="index.html">Home Style 1</a></li>
-                          <li><a href="index-2.html">Home Style 2</a></li>
-                          <li><a href="index-3.html">Home Style 3</a></li>
-                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="#">Home Style 1</a></li>
+                          <li><a href="#">Home Style 2</a></li>
+                          <li><a href="#">Home Style 3</a></li>
+                          <li><a href="#">About Us</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Pagelist 2</a>
                         <ul>
-                          <li><a href="service.html">Services</a></li>
-                          <li><a href="service-details.html">Service Details</a></li>
-                          <li><a href="team.html">Team</a></li>
-                          <li><a href="team-details.html">Team Details</a></li>
+                          <li><a href="#">Services</a></li>
+                          <li><a href="#">Service Details</a></li>
+                          <li><a href="#">Team</a></li>
+                          <li><a href="#">Team Details</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Pagelist 3</a>
                         <ul>
-                          <li><a href="price.html">Pricing Plans</a></li>
-                          <li><a href="blog-grid.html">Blog Grid</a></li>
-                          <li><a href="blog.html">Blog Standard</a></li>
-                          <li><a href="blog-details.html">Blog Details</a></li>
+                          <li><a href="#">Pricing Plans</a></li>
+                          <li><a href="#">Blog Grid</a></li>
+                          <li><a href="#">Blog Standard</a></li>
+                          <li><a href="#">Blog Details</a></li>
                         </ul>
                       </li>
                       <li><a href="#">Pagelist 4</a>
                         <ul>
-                          <li><a href="faq.html">FAQ Page</a></li>
-                          <li><a href="project.html">Project</a></li>
-                          <li><a href="project-details.html">Project Details</a></li>
-                          <li><a href="contact.html">Contact Us</a></li>
-                          <li><a href="error.html">Error Page</a></li>
+                          <li><a href="#">FAQ Page</a></li>
+                          <li><a href="#">Project</a></li>
+                          <li><a href="#">Project Details</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                          <li><a href="#">Error Page</a></li>
                         </ul>
                       </li>
                     </ul>
                   </li>
                   <li class="menu-item-has-children">
-                    <a href="blog.html">Blog</a>
+                    <a href="#">Blog</a>
                     <ul class="sub-menu">
-                      <li><a href="blog-grid.html">Blog Grid</a></li>
-                      <li><a href="blog.html">Blog Standard</a></li>
-                      <li><a href="blog-details.html">Blog Details</a></li>
+                      <li><a href="#">Blog Grid</a></li>
+                      <li><a href="#">Blog Standard</a></li>
+                      <li><a href="#">Blog Details</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="contact.html">Contact</a>
-                  </li>
+                    <a href="#">Contact</a>
+                  </li> -->
                 </ul>
               </nav>
               <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
@@ -121,51 +121,51 @@
       <div class="vs-menu-area text-center">
         <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-          <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Amperigo"></a>
+          <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gotham_air_hori_logo.svg" alt="Gotham Air"></a>
         </div>
         <div class="vs-mobile-menu">
           <ul>
             <li class="menu-item-has-children">
-              <a href="index.html">Home</a>
+              <a href="#">Home</a>
               <ul class="sub-menu">
-                <li><a href="index.html">Home Style 1</a></li>
-                <li><a href="index-2.html">Home Style 2</a></li>
-                <li><a href="index-3.html">Home Style 3</a></li>
+                <li><a href="#">Home Style 1</a></li>
+                <li><a href="#">Home Style 2</a></li>
+                <li><a href="#">Home Style 3</a></li>
               </ul>
             </li>
-            <li>
-              <a href="about.html">About Us</a>
+            <!-- <li>
+              <a href="#">About Us</a>
             </li>
             <li class="menu-item-has-children">
-              <a href="service.html">Services</a>
+              <a href="#">Services</a>
               <ul class="sub-menu">
-                <li><a href="service.html">Services</a></li>
-                <li><a href="service-details.html">Service Details</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Service Details</a></li>
               </ul>
             </li>
             <li class="menu-item-has-children">
-              <a href="team.html">Team</a>
+              <a href="#">Team</a>
               <ul class="sub-menu">
-                <li><a href="team.html">Team</a></li>
-                <li><a href="team-details.html">Team Details</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Team Details</a></li>
               </ul>
             </li>
             <li class="menu-item-has-children">
               <a href="#">Pages</a>
               <ul class="sub-menu">
-                <li><a href="price-plan.html">Pricing Plans</a></li>
-                <li><a href="blog-grid.html">Blog Grid</a></li>
-                <li><a href="blog.html">Blog Standard</a></li>
-                <li><a href="blog-details.html">Blog Details</a></li>
-                <li><a href="faq.html">FAQ Page</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="project-details.html">Project Details</a></li>
-                <li><a href="error.html">Error Page</a></li>
+                <li><a href="#">Pricing Plans</a></li>
+                <li><a href="#">Blog Grid</a></li>
+                <li><a href="#">Blog Standard</a></li>
+                <li><a href="#">Blog Details</a></li>
+                <li><a href="#">FAQ Page</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Project Details</a></li>
+                <li><a href="#">Error Page</a></li>
               </ul>
             </li>
             <li>
-              <a href="contact.html">Contact Us</a>
-            </li>
+              <a href="#">Contact Us</a>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -204,88 +204,88 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-auto">
                           <div class="header-logo">
-                            <a href="index.html">
-                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="logo">
+                            <a href="#">
+                              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gotham_air_hori_logo.svg" alt="Gotham Air">
                             </a>
                           </div>
                         </div>
                         <div class="col text-end text-xl-center">
-                            <nav class="main-menu menu-style1 d-none d-lg-block">
-                                <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="index.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Home Style 1</a></li>
-                                            <li><a href="index-2.html">Home Style 2</a></li>
-                                            <li><a href="index-3.html">Home Style 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">About Us</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="service.html">Services</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="service.html">Services</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children mega-menu-wrap">
-                                        <a href="#">Pages</a>
-                                        <ul class="mega-menu">
-                                            <li><a href="shop.html">Pagelist 1</a>
-                                                <ul>
-                                                    <li><a href="index.html">Home Style 1</a></li>
-                                                    <li><a href="index-2.html">Home Style 2</a></li>
-                                                    <li><a href="index-3.html">Home Style 3</a></li>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Pagelist 2</a>
-                                                <ul>
-                                                    <li><a href="service.html">Services</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Pagelist 3</a>
-                                                <ul>
-                                                    <li><a href="price.html">Pricing Plans</a></li>
-                                                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                    <li><a href="blog.html">Blog Standard</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Pagelist 4</a>
-                                                <ul>
-                                                    <li><a href="faq.html">FAQ Page</a></li>
-                                                    <li><a href="project.html">Project</a></li>
-                                                    <li><a href="project-details.html">Project Details</a></li>
-                                                    <li><a href="contact.html">Contact Us</a></li>
-                                                    <li><a href="error.html">Error Page</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                            <li><a href="blog.html">Blog Standard</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
+                          <nav class="main-menu menu-style1 d-none d-lg-block">
+                            <ul>
+                              <li class="menu-item-has-children">
+                                <a href="#">Home</a>
+                                <ul class="sub-menu">
+                                  <li><a href="#">Home Style 1</a></li>
+                                  <li><a href="#">Home Style 2</a></li>
+                                  <li><a href="#">Home Style 3</a></li>
                                 </ul>
-                            </nav>
-                            <button class="vs-menu-toggle d-lg-none"><i class="fal fa-bars"></i></button>
+                              </li>
+                              <!-- <li>
+                                <a href="#">About Us</a>
+                              </li>
+                              <li class="menu-item-has-children">
+                                <a href="#">Services</a>
+                                <ul class="sub-menu">
+                                  <li><a href="#">Services</a></li>
+                                  <li><a href="#">Service Details</a></li>
+                                </ul>
+                              </li>
+                              <li class="menu-item-has-children mega-menu-wrap">
+                                <a href="#">Pages</a>
+                                <ul class="mega-menu">
+                                  <li><a href="#">Pagelist 1</a>
+                                    <ul>
+                                      <li><a href="#">Home Style 1</a></li>
+                                      <li><a href="#">Home Style 2</a></li>
+                                      <li><a href="#">Home Style 3</a></li>
+                                      <li><a href="#">About Us</a></li>
+                                    </ul>
+                                  </li>
+                                  <li><a href="#">Pagelist 2</a>
+                                    <ul>
+                                      <li><a href="#">Services</a></li>
+                                      <li><a href="#">Service Details</a></li>
+                                      <li><a href="#">Team</a></li>
+                                      <li><a href="#">Team Details</a></li>
+                                    </ul>
+                                  </li>
+                                  <li><a href="#">Pagelist 3</a>
+                                    <ul>
+                                      <li><a href="#">Pricing Plans</a></li>
+                                      <li><a href="#">Blog Grid</a></li>
+                                      <li><a href="#">Blog Standard</a></li>
+                                      <li><a href="#">Blog Details</a></li>
+                                    </ul>
+                                  </li>
+                                  <li><a href="#">Pagelist 4</a>
+                                    <ul>
+                                      <li><a href="#">FAQ Page</a></li>
+                                      <li><a href="#">Project</a></li>
+                                      <li><a href="#">Project Details</a></li>
+                                      <li><a href="#">Contact Us</a></li>
+                                      <li><a href="#">Error Page</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="menu-item-has-children">
+                                <a href="#">Blog</a>
+                                <ul class="sub-menu">
+                                  <li><a href="#">Blog Grid</a></li>
+                                  <li><a href="#">Blog Standard</a></li>
+                                  <li><a href="#">Blog Details</a></li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">Contact</a>
+                              </li> -->
+                            </ul>
+                          </nav>
+                          <button class="vs-menu-toggle d-lg-none"><i class="fal fa-bars"></i></button>
                         </div>
                         <div class="col-auto d-none d-xl-block">
                           <div class="header-btn">
-                            <a href="contact.html" class="vs-btn">get a quote<i class="far fa-long-arrow-right"></i></a>
+                            <a href="#" class="vs-btn">get a quote<i class="far fa-long-arrow-right"></i></a>
                           </div>
                         </div>
                     </div>
