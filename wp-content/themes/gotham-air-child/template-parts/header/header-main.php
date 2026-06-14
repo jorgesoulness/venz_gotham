@@ -39,77 +39,17 @@ $btn_url = get_theme_mod(
             </div>
           </div>
           <div class="col-7 col-md-9 text-end position-static">
-            <nav class="main-menu menu-sticky1 d-none d-lg-block">
-              <ul>
-                <li class="menu-item-has-children">
-                  <a href="#">Home</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Home Style 1</a></li>
-                    <li><a href="#">Home Style 2</a></li>
-                    <li><a href="#">Home Style 3</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="#">Services</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Service Details</a></li>
-                  </ul>
-                </li>
-                <li class="menu-item-has-children mega-menu-wrap">
-                  <a href="#">Pages</a>
-                  <ul class="mega-menu">
-                    <li><a href="#">Pagelist 1</a>
-                      <ul>
-                        <li><a href="#">Home Style 1</a></li>
-                        <li><a href="#">Home Style 2</a></li>
-                        <li><a href="#">Home Style 3</a></li>
-                        <li><a href="#">About Us</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Pagelist 2</a>
-                      <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Service Details</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Team Details</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Pagelist 3</a>
-                      <ul>
-                        <li><a href="#">Pricing Plans</a></li>
-                        <li><a href="#">Blog Grid</a></li>
-                        <li><a href="#">Blog Standard</a></li>
-                        <li><a href="#">Blog Details</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Pagelist 4</a>
-                      <ul>
-                        <li><a href="#">FAQ Page</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Project Details</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Error Page</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="#">Blog</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Blog Grid</a></li>
-                    <li><a href="#">Blog Standard</a></li>
-                    <li><a href="#">Blog Details</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
+            <?php
+            wp_nav_menu( array(
+                'theme_location'  => 'menu-main',
+                'container'       => 'nav',
+                'container_class' => 'main-menu menu-sticky1 d-none d-lg-block',
+                'container_id'    => 'stickyNav',
+                'items_wrap'      => '<ul>%3$s</ul>',
+                'before'          => '',
+                'after'           => '',
+            ) );
+            ?>
             <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
           </div>
         </div>
@@ -129,51 +69,17 @@ $btn_url = get_theme_mod(
         <?php endif; ?>
         </a>
       </div>
-      <div class="vs-mobile-menu">
-        <ul>
-          <li class="menu-item-has-children">
-            <a href="#">Home</a>
-            <ul class="sub-menu">
-              <li><a href="#">Home Style 1</a></li>
-              <li><a href="#">Home Style 2</a></li>
-              <li><a href="#">Home Style 3</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="#">Services</a>
-            <ul class="sub-menu">
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Service Details</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="#">Team</a>
-            <ul class="sub-menu">
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Team Details</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="#">Pages</a>
-            <ul class="sub-menu">
-              <li><a href="#">Pricing Plans</a></li>
-              <li><a href="#">Blog Grid</a></li>
-              <li><a href="#">Blog Standard</a></li>
-              <li><a href="#">Blog Details</a></li>
-              <li><a href="#">FAQ Page</a></li>
-              <li><a href="#">Project</a></li>
-              <li><a href="#">Project Details</a></li>
-              <li><a href="#">Error Page</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+      <?php
+      wp_nav_menu( array(
+          'theme_location'  => 'menu-main',
+          'container'       => 'div',
+          'container_class' => 'vs-mobile-menu',
+          'container_id'    => 'mobileNav',
+          'items_wrap'      => '<ul>%3$s</ul>',
+          'before'          => '',
+          'after'           => '',
+      ) );
+      ?>
     </div>
   </div>
   <!--==============================
@@ -253,85 +159,18 @@ $btn_url = get_theme_mod(
               </div>
             </div>
             <div class="col text-end text-xl-center">
-              <nav class="main-menu menu-style1 d-none d-lg-block">
-                <!-- <ul>
-                  <li class="menu-item-has-children">
-                    <a href="#">Home</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Home Style 1</a></li>
-                      <li><a href="#">Home Style 2</a></li>
-                      <li><a href="#">Home Style 3</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">About Us</a>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Services</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Service Details</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children mega-menu-wrap">
-                    <a href="#">Pages</a>
-                    <ul class="mega-menu">
-                      <li><a href="#">Pagelist 1</a>
-                        <ul>
-                          <li><a href="#">Home Style 1</a></li>
-                          <li><a href="#">Home Style 2</a></li>
-                          <li><a href="#">Home Style 3</a></li>
-                          <li><a href="#">About Us</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Pagelist 2</a>
-                        <ul>
-                          <li><a href="#">Services</a></li>
-                          <li><a href="#">Service Details</a></li>
-                          <li><a href="#">Team</a></li>
-                          <li><a href="#">Team Details</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Pagelist 3</a>
-                        <ul>
-                          <li><a href="#">Pricing Plans</a></li>
-                          <li><a href="#">Blog Grid</a></li>
-                          <li><a href="#">Blog Standard</a></li>
-                          <li><a href="#">Blog Details</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Pagelist 4</a>
-                        <ul>
-                          <li><a href="#">FAQ Page</a></li>
-                          <li><a href="#">Project</a></li>
-                          <li><a href="#">Project Details</a></li>
-                          <li><a href="#">Contact Us</a></li>
-                          <li><a href="#">Error Page</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Blog</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Blog Grid</a></li>
-                      <li><a href="#">Blog Standard</a></li>
-                      <li><a href="#">Blog Details</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>
-                </ul> -->
-                <?php
-                  wp_nav_menu([
-                    'theme_location' => 'menu-main',
-                    'container'      => false,
-                    'menu_class'     => '',
-                    'walker'         => new GT_Nav_Walker(),
-                  ]);
-                ?>
-              </nav>
+              <!-- <nav class="main-menu menu-style1 d-none d-lg-block"> -->
+              <?php
+              wp_nav_menu( array(
+                  'theme_location'  => 'menu-main',
+                  'container'       => 'nav',
+                  'container_class' => 'main-menu menu-style1 d-none d-lg-block',
+                  'container_id'    => 'desktopNav',
+                  'items_wrap'      => '<ul>%3$s</ul>',
+                  'before'          => '',
+                  'after'           => '',
+              ) );
+              ?>
               <button class="vs-menu-toggle d-lg-none"><i class="fal fa-bars"></i></button>
             </div>
             <div class="col-auto d-none d-xl-block">

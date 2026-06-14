@@ -32,7 +32,8 @@ define( 'DB_USER', 'qliucnky_admindbs' );
 define( 'DB_PASSWORD', '=-_.2Lo$*8tthpk0' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+// define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', '204.93.224.158' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -91,7 +92,6 @@ $table_prefix = 'gtdb_';
 define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
 
 
 /* That's all, stop editing! Happy publishing. */

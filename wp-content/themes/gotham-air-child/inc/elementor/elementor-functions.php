@@ -30,6 +30,18 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 		new \GT_Hero_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-about-us.php';
+	$widgets_manager->register(
+			new \GT_About_Us_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-brands.php';
+	$widgets_manager->register(
+			new \GT_Brands_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-services.php';
+	$widgets_manager->register(
+			new \GT_Services_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------
@@ -38,14 +50,7 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 */
 add_action('elementor/widgets/register', 'gt_register_elementor_widgets');
 function gt_register_widget_assets() {
-	wp_register_script(
-		'gt-hero',
-		get_stylesheet_directory_uri() . '/inc/elementor/assets/js/gt-hero.js',
-		[
-			'jquery'
-		],
-		'1.0.0',
-		true
-	);
+	wp_register_script('gt-hero', get_stylesheet_directory_uri() . '/inc/elementor/assets/js/gt-hero.js', ['jquery'], '1.0.0', true);
+	wp_register_script('gt-services', get_stylesheet_directory_uri() . '/inc/elementor/assets/js/gt-services.js', ['jquery'], '1.0.0', true);
 }
 add_action('elementor/frontend/after_register_scripts', 'gt_register_widget_assets');
