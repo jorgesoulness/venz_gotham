@@ -13,23 +13,34 @@ function gotham_air_child_setup() {
   register_nav_menus( array(
       'menu-main' => esc_html__( 'Menu Main', 'gotham-air-child' ),
       'menu-footer' => esc_html__( 'Menu Footer', 'gotham-air-child' ),
+      'menu-services' => esc_html__( 'Menu Services', 'gotham-air-child' ),
+      'menu-copyright' => esc_html__( 'Menu Copyright', 'gotham-air-child' ),
   ) );
   //Función para cargar logo
   add_theme_support( 'custom-logo', array(
     'flex-width' => true,
     'flex-height' => true,
   ) );
-  //función para activar extensiones extras al WP
-  function bp_mime_type ( $mime_types ) {
-    $mime_types['svg'] = 'image/svg+xml';
-    return $mime_types;
-  }   
-   add_filter('upload_mimes', 'bp_mime_type', 1, 1);
 }
+//función para activar extensiones extras al WP
+function gt_mime_types( $mime_types ) {
+	$mime_types['svg'] = 'image/svg+xml';
+	return $mime_types;
+}
+add_filter( 'upload_mimes', 'gt_mime_types' );
 add_action( 'after_setup_theme', 'gotham_air_child_setup' );
+function gt_fix_svg_mime_type($data, $file, $filename, $mimes){
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    if($ext === 'svg'){
+        $data['ext'] = 'svg';
+        $data['type'] = 'image/svg+xml';
+    }
+    return $data;
+}
+add_filter('wp_check_filetype_and_ext', 'gt_fix_svg_mime_type', 10, 4);
 //Se agregan recursos CSS & JS del tema hijo.
 function gotham_air_child_head() {
-  $versionFiles = '1.0.7';
+  $versionFiles = '1.0.10';
   wp_enqueue_style( 'google-gotham-air-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:wght@100..900&display=swap', array(), null );
   // CSS
   wp_enqueue_style('bootstrap.min',  get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), $versionFiles);
@@ -78,22 +89,18 @@ function remove_admin_bar() {
 /**
  * Menu Walker
  */
-// require get_stylesheet_directory() . '/inc/class-menu-walker.php';
+require get_stylesheet_directory() . '/inc/class-gt-navwalker.php';
 
 /**
  * Customizer additions.
  */
-// require get_stylesheet_directory() . '/inc/customizer.php';
+require get_stylesheet_directory() . '/inc/customizer/gt-header-customizer.php';
+require get_stylesheet_directory() . '/inc/customizer/gt-footer-customizer.php';
 
 /**
  * Elementor additions.
  */
-// require get_stylesheet_directory() . '/inc/elementor/elementor-functions.php';
-
-/**
- * Footer additions.
- */
-// require get_stylesheet_directory() . '/inc/footer-customizer.php';
+require get_stylesheet_directory() . '/inc/elementor/elementor-functions.php';
 
 /**
  * Post ajax
