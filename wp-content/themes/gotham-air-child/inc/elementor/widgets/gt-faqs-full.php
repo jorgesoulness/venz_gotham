@@ -7,10 +7,10 @@ use Elementor\Controls_Manager;
 use Elementor\Repeater;
 class GT_FAQS_FULL_Widget extends Widget_Base {
 	public function get_name() {
-		return 'gt-faqs';
+		return 'gt-faqs-full';
 	}
 	public function get_title() {
-		return __('GT FAQs', 'gotham-air-child');
+		return __('GT FAQs Full', 'gotham-air-child');
 	}
 	public function get_icon() {
 		return 'eicon-accordion';
