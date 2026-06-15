@@ -74,6 +74,10 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 		new \GT_Reviews_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-why-choose.php';
+	$widgets_manager->register(
+			new \GT_Why_Choose_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------
