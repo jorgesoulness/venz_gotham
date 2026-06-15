@@ -78,6 +78,14 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 			new \GT_Why_Choose_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-contact-us.php';
+	$widgets_manager->register(
+			new \GT_Contact_Us_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-map.php';
+	$widgets_manager->register(
+			new \GT_Map_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------

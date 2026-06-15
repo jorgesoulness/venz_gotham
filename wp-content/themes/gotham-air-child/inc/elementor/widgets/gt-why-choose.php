@@ -95,10 +95,7 @@ class GT_Why_Choose_Widget extends Widget_Base {
             $bg = 'data-bg-src="' . esc_url($settings['background_image']['url']) . '"';
         }
         ?>
-        <section
-            class="bg-title position-relative space-top space-extra-bottom"
-            <?php echo $bg; ?>
-        >
+        <section class="bg-title position-relative space-top space-extra-bottom" <?php echo $bg; ?>>
             <div class="container z-index-common">
                 <div class="row">
                     <div class="col-md-9 col-lg-7 col-xl-8 text-center text-md-start">
@@ -114,16 +111,16 @@ class GT_Why_Choose_Widget extends Widget_Base {
                                 </h2>
                             <?php endif; ?>
                             <?php if (!empty($settings['description'])) : ?>
-                                <p class="sec-text">
+                                <p class="sec-text" style="color:#ffffff;">
                                     <?php echo wp_kses_post($settings['description']); ?>
                                 </p>
                             <?php endif; ?>
                         </div>
                     </div>
                     <?php if (!empty($settings['features'])) : ?>
-                        <div class="col-xl-10">
+                        <div class="col-xl-12">
                             <div class="feature-style2">
-                                <div class="dot-shape"></div>
+                                <!-- <div class="dot-shape"></div> -->
                                 <?php foreach ($settings['features'] as $feature) : ?>
                                     <div class="feature-item">
                                         <?php if (!empty($feature['icon']['url'])) : ?>
