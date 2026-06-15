@@ -50,6 +50,18 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 			new \GT_CTA_Widget()
 	);
+	require_once __DIR__  . '/widgets/gt-banner-page.php';
+	$widgets_manager->register(
+			new \GT_Banner_Page_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-content-about-us.php';
+	$widgets_manager->register(
+		new \GT_Content_About_Us_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-description.php';
+	$widgets_manager->register(
+		new \GT_Description_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------

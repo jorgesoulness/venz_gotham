@@ -41,9 +41,9 @@ $hours_title = get_theme_mod(
 	'gt_footer_hours_title',
 	'Working Hours'
 );
-$instagram_title = get_theme_mod(
-	'gt_footer_instagram_title',
-	'Instagram'
+$certificate_title = get_theme_mod(
+	'gt_footer_certificate_title',
+	'Certifications'
 );
 /*
 |--------------------------------------------------------------------------
@@ -92,8 +92,8 @@ $developer_url = get_theme_mod(
 	'gt_footer_developer_url',
 	'#'
 );
-$instagram_shortcode = get_theme_mod(
-	'gt_footer_instagram_shortcode',
+$certificate_image = get_theme_mod(
+	'gt_footer_certificate_image',
 	''
 );
 /*
@@ -118,7 +118,11 @@ $internal_phone_icon = get_theme_mod(
 	get_stylesheet_directory_uri() . '/assets/img/call-i.svg'
 );
 ?>
+<?php if(is_front_page() || is_page(8)): ?>
 <footer class="footer-wrapper footer-layout3 bg-title">
+<?php else: ?>
+<footer class="footer-wrapper footer-layout3 bg-title background-image" style="background-image: url('<?php echo get_stylesheet_directory_uri(""); ?>/assets/img/bg/footer-bg-1-1.png');">
+<?php endif; ?>
   <?php if(is_front_page() || is_page(8)): ?>
   <!-- FOOTER TOP -->
 	<div class="footer-top" data-bg-src="<?php echo esc_url( $footer_top_bg ); ?>">
@@ -147,7 +151,7 @@ $internal_phone_icon = get_theme_mod(
     <div class="footer-top">
       <div class="row align-items-center justify-content-center justify-content-md-between text-center text-md-start gy-4">
         <div class="col-md-4 col-lg-auto">
-          <a href="<?php echo esc_url( home_url('/') ); ?>">
+          <a href="<?php echo esc_url( home_url('/') ); ?>" class="logoFooter">
             <img src="<?php echo esc_url( $internal_logo ); ?>" alt="<?php bloginfo('name'); ?>">
           </a>
         </div>
@@ -262,54 +266,31 @@ $internal_phone_icon = get_theme_mod(
 						</div>
 					</div>
 				</div>
-				<!-- INSTAGRAM -->
+				<!-- certificated -->
 				<div class="col-md-6 col-lg-3 col-xl-auto">
 					<div class="widget footer-widget">
 						<h4 class="widget_title">
-							<?php echo esc_html( $instagram_title ); ?>
+							<?php echo esc_html( $certificate_title ); ?>
 						</h4>
-						<?php
-						if ( ! empty( $instagram_shortcode ) ) {
-							echo do_shortcode(
-								$instagram_shortcode
-							);
-						}
-						?>
+						<?php if ( ! empty( $certificate_image ) ) : ?>
+							<div class="footer-certificate">
+								<img
+									src="<?php echo esc_url( $certificate_image ); ?>"
+									alt="<?php echo esc_attr( $certificate_title ); ?>"
+								>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- SOCIAL ICONS -->
-	<div class="text-center pb-40">
-		<?php if ( $facebook ) : ?>
-			<a href="<?php echo esc_url( $facebook ); ?>" target="_blank">
-				<i class="fab fa-facebook-f"></i>
-			</a>
-		<?php endif; ?>
-		<?php if ( $instagram ) : ?>
-			<a href="<?php echo esc_url( $instagram ); ?>" target="_blank">
-				<i class="fab fa-instagram"></i>
-			</a>
-		<?php endif; ?>
-		<?php if ( $linkedin ) : ?>
-			<a href="<?php echo esc_url( $linkedin ); ?>" target="_blank">
-				<i class="fab fa-linkedin-in"></i>
-			</a>
-		<?php endif; ?>
-		<?php if ( $twitter ) : ?>
-			<a href="<?php echo esc_url( $twitter ); ?>" target="_blank">
-				<i class="fab fa-twitter"></i>
-			</a>
-		<?php endif; ?>
-		<?php if ( $youtube ) : ?>
-			<a href="<?php echo esc_url( $youtube ); ?>" target="_blank">
-				<i class="fab fa-youtube"></i>
-			</a>
-		<?php endif; ?>
-	</div>
 	<!-- COPYRIGHT -->
+	<?php if(is_front_page() || is_page(8)): ?>
 	<div class="copyright-wrap" data-bg-src="<?php echo esc_url( $footer_bottom_bg ); ?>">
+	<?php else: ?>
+	<div class="copyright-wrap">
+	<?php endif; ?>
 		<div class="container">
 			<div class="row align-items-center justify-content-between flex-row-reverse gy-2 text-center text-md-start">
 				<div class="col-md-auto">

@@ -65,7 +65,8 @@
         background-color: $white-color;
     }
 
-    button {
+    button,
+    input[type="submit"] {
         width: 145px;
         padding-left: 0;
         padding-right: 0;
@@ -78,6 +79,9 @@
         &:hover {
             color: $title-color;
         }
+    }
+    input[type="submit"] {
+        flex: none!important;
     }
 }
 

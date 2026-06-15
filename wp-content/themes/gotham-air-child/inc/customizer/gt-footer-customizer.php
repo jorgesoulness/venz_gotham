@@ -74,7 +74,7 @@ function gt_footer_customizer( $wp_customize ) {
 		'services'    => 'Services',
 		'quicklinks'  => 'Quick Links',
 		'hours'       => 'Working Hours',
-		'instagram'   => 'Instagram',
+		'certificate' => 'Certifications',
 	];
 	foreach ( $titles as $key => $default ) {
 		$wp_customize->add_setting(
@@ -119,17 +119,19 @@ function gt_footer_customizer( $wp_customize ) {
 	}
 	/*
 	|--------------------------------------------------------------------------
-	| Instagram
+	| IMAGEN CERTIFICADO
 	|--------------------------------------------------------------------------
 	*/
-	$wp_customize->add_setting( 'gt_footer_instagram_shortcode' );
+	$wp_customize->add_setting( 'gt_footer_certificate_image' );
 	$wp_customize->add_control(
-		'gt_footer_instagram_shortcode',
-		[
-			'label'   => 'Instagram Shortcode',
-			'section' => 'gt_footer_section',
-			'type'    => 'textarea',
-		]
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'gt_footer_certificate_image',
+			[
+				'label'   => 'Certificate Image',
+				'section' => 'gt_footer_section',
+			]
+		)
 	);
 	/*
 	|--------------------------------------------------------------------------
