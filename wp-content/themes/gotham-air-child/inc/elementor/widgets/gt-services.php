@@ -103,6 +103,14 @@ class GT_Services_Widget extends Widget_Base {
             ]
         );
         $service_repeater->add_control(
+            'service_button_text',
+            [
+                'label' => __('Button Text'),
+                'type' => Controls_Manager::TEXT,
+                'default' => 'Read More'
+            ]
+        );
+        $service_repeater->add_control(
             'service_features',
             [
                 'label' => __('Features'),
@@ -158,11 +166,9 @@ class GT_Services_Widget extends Widget_Base {
                                                         <img src="<?php echo esc_url($service['service_icon']['url']); ?>" alt="">
                                                     </div>
                                                 <?php endif; ?>
-
                                                 <span class="service-number">
                                                     <?php echo str_pad(($index + 1), 2, '0', STR_PAD_LEFT); ?>
                                                 </span>
-
                                             </div>
                                             <h3 class="service-title h5">
                                                 <?php echo esc_html($service['service_title']); ?>
@@ -180,6 +186,25 @@ class GT_Services_Widget extends Widget_Base {
                                                     <?php endforeach; ?>
                                                 </ul>
                                             <?php endif; ?>
+                                            <?php if (!empty($service['service_link']['url'])) : ?>
+                                              <a
+                                                  href="<?php echo esc_url($service['service_link']['url']); ?>"
+                                                  class="arrow-btn"
+                                                  <?php if (!empty($service['service_link']['is_external'])) : ?>
+                                                      target="_blank"
+                                                  <?php endif; ?>
+                                                  <?php if (!empty($service['service_link']['nofollow'])) : ?>
+                                                      rel="nofollow"
+                                                  <?php endif; ?>
+                                              >
+                                                  <?php echo esc_html(
+                                                      !empty($service['service_button_text'])
+                                                          ? $service['service_button_text']
+                                                          : 'Read More'
+                                                  ); ?>
+                                                  <i class="fal fa-long-arrow-right"></i>
+                                              </a>
+                                          <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>

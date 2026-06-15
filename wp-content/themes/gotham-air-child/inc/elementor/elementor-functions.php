@@ -42,6 +42,14 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 			new \GT_Services_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-faqs.php';
+	$widgets_manager->register(
+			new \GT_FAQS_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-cta.php';
+	$widgets_manager->register(
+			new \GT_CTA_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------
