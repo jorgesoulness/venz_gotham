@@ -76,7 +76,7 @@ class GT_Reviews_Widget extends Widget_Base {
 					!empty($settings['title'])
 				) : ?>
 					<div class="row justify-content-center text-center">
-						<div class="col-xl-4">
+						<div class="col-xl-8">
 							<div class="title-area">
 								<?php if (!empty($settings['subtitle'])) : ?>
 									<span class="sec-subtitle">
