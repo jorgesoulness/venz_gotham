@@ -206,13 +206,13 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
                 <a href="<?php echo esc_url( $slide['video_url'] ); ?>" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
               </ls-layer>
 						<?php endif; ?>
-            <ls-layer style="top:500px; left:600px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
+            <ls-layer style="top:500px; left:650px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
               <a href="tel:123456789" class="ls-icon-btn"><i class="fal fa-phone-alt"></i></a>
             </ls-layer>
-            <ls-layer style="top:452px; left:800px;" class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
+            <ls-layer style="top:452px; left:830px;" class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
               <a href="tel:123456789" class="ls-icon-btn"><i class="fal fa-phone-alt"></i></a>
             </ls-layer>
-            <ls-layer style="top:439px; left:900px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
+            <ls-layer style="top:439px; left:930px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
               <a href="tel:123456789" class="ls-icon-btn"><i class="fal fa-phone-alt"></i></a>
             </ls-layer>
 					</div>
