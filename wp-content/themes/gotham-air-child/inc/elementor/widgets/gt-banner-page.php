@@ -61,6 +61,7 @@ class GT_Banner_Page_Widget extends \Elementor\Widget_Base {
 					</h1>
 				</div>
 			</div>
+			<div class="breadcumb-overlay"></div>
 		</div>
 		<?php
 	}

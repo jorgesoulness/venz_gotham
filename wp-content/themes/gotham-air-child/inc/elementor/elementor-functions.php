@@ -62,6 +62,14 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 		new \GT_Description_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-faqs-full.php';
+	$widgets_manager->register(
+		new \GT_FAQS_FULL_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-about-us-2.php';
+	$widgets_manager->register(
+		new \GT_About_Us_2_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------
