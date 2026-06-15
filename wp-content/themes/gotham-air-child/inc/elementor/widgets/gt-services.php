@@ -136,7 +136,7 @@ class GT_Services_Widget extends Widget_Base {
             ? 'data-bg-src="' . esc_url($settings['background_image']['url']) . '"'
             : '';
         ?>
-        <section class="space-top space-extra-bottom" <?php echo $bg; ?>>
+        <section class="space-top space-extra-bottom serviceSec" <?php echo $bg; ?>>
             <div class="container">
                 <div class="title-area text-center text-xl-start">
                     <?php if (!empty($settings['subtitle'])) : ?>

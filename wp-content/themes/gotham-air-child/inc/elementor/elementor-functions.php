@@ -70,6 +70,10 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 		new \GT_About_Us_2_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-reviews.php';
+	$widgets_manager->register(
+		new \GT_Reviews_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------

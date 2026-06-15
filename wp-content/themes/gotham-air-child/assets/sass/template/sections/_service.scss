@@ -1,6 +1,11 @@
 @use '../../base/mixin' as *;
 @use '../../base/variable' as *;
 
+.serviceSec {
+  & .sec-subtitle2 {
+    color: white!important; border: 1px solid #fff!important;
+  }
+}
 
 .service-style1 {
     background-color: var(--white-color);
