@@ -119,7 +119,7 @@ $btn_url = get_theme_mod(
           </div>
           <div class="col-auto d-none d-md-block">
             <div class="social-style2">
-              <span class="social-title">Follow Us On:</span>
+              <span class="social-title">Follow Us:</span>
               <?php if ( $facebook ) : ?>
               <a href="<?php echo esc_url( $facebook ); ?>">
                 <i class="fab fa-facebook-f"></i>

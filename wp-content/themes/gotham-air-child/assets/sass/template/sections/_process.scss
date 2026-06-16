@@ -12,7 +12,7 @@
     background-color: var(--secondary-color);
     padding: 30px 30px 22px 30px;
     margin: 25px 0 50px 20px;
-
+    height: 100%;
     &:before {
         content: '';
         position: absolute;
@@ -20,11 +20,10 @@
         top: 30px;
         right: 25px;
         bottom: -20px;
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--border-color-pro);
         z-index: -1;
         transition: all ease 0.4s;
     }
-
     .process-number {
         position: absolute;
         left: 20px;
@@ -62,7 +61,7 @@
     }
 
     .process-text {
-        margin-bottom: 0;
+        margin-bottom: 0; font-size: 15px;
     }
 
     &:hover {
