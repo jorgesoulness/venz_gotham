@@ -86,6 +86,14 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 			new \GT_Map_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-our-values.php';
+	$widgets_manager->register(
+			new \GT_Our_Values_Widget()
+	);
+	require_once __DIR__ . '/widgets/gt-team.php';
+	$widgets_manager->register(
+			new \GT_Team_Widget()
+	);
 }
 /*
 |--------------------------------------------------------------------------
