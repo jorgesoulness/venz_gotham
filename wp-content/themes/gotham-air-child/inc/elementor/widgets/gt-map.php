@@ -53,15 +53,7 @@ class GT_Map_Widget extends Widget_Base {
             : 700;
         ?>
         <div class="contact-map">
-            <iframe
-                src="<?php echo esc_url($settings['map_embed']); ?>"
-                width="100%"
-                height="<?php echo esc_attr($height); ?>"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          <iframe src="<?php echo esc_url($settings['map_embed']); ?>" width="600" height="<?php echo esc_attr($height); ?>" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <?php
     }
