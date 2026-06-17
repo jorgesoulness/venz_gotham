@@ -54,6 +54,11 @@ blockquote.vs-quote {
 
 }
 
+.gt-load-more-posts.loading {
+    opacity: .7;
+    pointer-events: none;
+}
+
 
 .blog-meta {
   margin-top: -0.4em;

@@ -94,7 +94,51 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 			new \GT_Team_Widget()
 	);
+	require_once __DIR__ . '/widgets/class-gt-posts-blog-widget.php';
+	$widgets_manager->register(
+		new \GT_Posts_Blog_Widget()
+	);
 }
+/**
+ * ==================================================
+ * GT POSTS BLOG
+ * ==================================================
+ */
+/**
+ * Registrar Scripts
+ */
+function gt_posts_blog_scripts() {
+	wp_register_script(
+		'gt-posts-blog',
+		get_stylesheet_directory_uri() . '/assets/js/gt-posts-blog.js',
+		['jquery'],
+		time(),
+		true
+	);
+	wp_localize_script(
+		'gt-posts-blog',
+		'gtPostsBlog',
+		[
+			'ajaxurl' => admin_url('admin-ajax.php'),
+			'nonce'   => wp_create_nonce('gt_posts_blog_nonce')
+		]
+	);
+}
+add_action('wp_enqueue_scripts', 'gt_posts_blog_scripts');
+/**
+ * AJAX Logged Users
+ */
+add_action(
+	'wp_ajax_gt_load_more_posts',
+	'gt_load_more_posts'
+);
+/**
+ * AJAX Guests
+ */
+add_action(
+	'wp_ajax_nopriv_gt_load_more_posts',
+	'gt_load_more_posts'
+);
 /*
 |--------------------------------------------------------------------------
 | Register Resources for Elementor
