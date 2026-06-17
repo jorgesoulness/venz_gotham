@@ -14,8 +14,8 @@ class GT_Services_Carousel_Widget extends \Elementor\Widget_Base {
         return 'eicon-slider-push';
     }
     public function get_categories() {
-        return ['gt-elements'];
-    }
+		return ['gotham-air'];
+	}
     public function get_keywords() {
         return ['services', 'carousel', 'slider', 'gt'];
     }
