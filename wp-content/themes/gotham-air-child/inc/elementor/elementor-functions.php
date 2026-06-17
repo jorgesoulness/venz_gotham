@@ -98,6 +98,10 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
 		new \GT_Posts_Blog_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-services-carousel.php';
+	$widgets_manager->register(
+		new \GT_Services_Carousel_Widget()
+	);
 }
 /**
  * ==================================================
