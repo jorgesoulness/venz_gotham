@@ -40,7 +40,7 @@ function gt_fix_svg_mime_type($data, $file, $filename, $mimes){
 add_filter('wp_check_filetype_and_ext', 'gt_fix_svg_mime_type', 10, 4);
 //Se agregan recursos CSS & JS del tema hijo.
 function gotham_air_child_head() {
-  $versionFiles = '1.0.41';
+  $versionFiles = '1.0.46';
   wp_enqueue_style( 'google-gotham-air-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:wght@100..900&display=swap', array(), null );
   // CSS
   wp_enqueue_style('bootstrap.min',  get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), $versionFiles);

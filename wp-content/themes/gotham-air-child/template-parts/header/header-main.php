@@ -175,9 +175,8 @@ $btn_url = get_theme_mod(
             </div>
             <div class="col-auto d-none d-xl-block">
               <div class="header-btn">
-                <a href="<?php echo esc_url( $btn_url ); ?>" class="vs-btn">
-                  <?php echo esc_html( $btn_text ); ?>
-                  <i class="far fa-long-arrow-right"></i>
+                <a href="#" class="vs-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+                  <?php echo esc_html( $btn_text ); ?> <i class="far fa-long-arrow-right"></i>
                 </a>
               </div>
             </div>

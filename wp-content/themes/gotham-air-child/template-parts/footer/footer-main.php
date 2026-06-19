@@ -319,3 +319,17 @@ $internal_phone_icon = get_theme_mod(
 		</div>
 	</div>
 </footer>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h4 class="modal-title">Request Service</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="c159422" title="Modal Form"]'); ?>
+      </div>
+    </div>
+  </div>
+</div>

@@ -73,6 +73,21 @@ class GT_Description_Widget extends \Elementor\Widget_Base {
 				'type'  => \Elementor\Controls_Manager::URL,
 			]
 		);
+		$this->add_control(
+			'button_text_two',
+			[
+				'label'   => esc_html__( 'Button Text', 'gotham-air-child' ),
+				'type'    => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Make Appointment',
+			]
+		);
+		$this->add_control(
+			'button_url_two',
+			[
+				'label' => esc_html__( 'Button URL', 'gotham-air-child' ),
+				'type'  => \Elementor\Controls_Manager::URL,
+			]
+		);
 		$this->end_controls_section();
 	}
 	protected function render() {
@@ -114,6 +129,32 @@ class GT_Description_Widget extends \Elementor\Widget_Base {
 									<?php echo $target . $nofollow; ?>
 								>
 									<?php echo esc_html( $settings['button_text'] ); ?>
+									<i class="far fa-long-arrow-right"></i>
+								</a>
+							<?php endif; ?>
+							<?php if (
+								! empty( $settings['button_text'] ) &&
+								! empty( $settings['button_url']['url'] )
+							) : ?>
+								<a
+									href="<?php echo esc_url( $settings['button_url']['url'] ); ?>"
+									class="vs-btn"
+									<?php echo $target . $nofollow; ?>
+								>
+									<?php echo esc_html( $settings['button_text'] ); ?>
+									<i class="far fa-long-arrow-right"></i>
+								</a>
+							<?php endif; ?>
+							<?php if (
+								! empty( $settings['button_text_two'] ) &&
+								! empty( $settings['button_url_two']['url'] )
+							) : ?>
+								<a
+									href="<?php echo esc_url( $settings['button_url_two']['url'] ); ?>"
+									class="vs-btn"
+									<?php echo $target . $nofollow; ?>
+								>
+									<?php echo esc_html( $settings['button_text_two'] ); ?>
 									<i class="far fa-long-arrow-right"></i>
 								</a>
 							<?php endif; ?>

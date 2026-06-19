@@ -1,6 +1,22 @@
 @use '../../base/mixin' as *;
 @use '../../base/variable' as *;
 
+#contactModal .wpcf7-form-control{
+  width:100%;
+}
+#contactModal textarea{
+  min-height:140px; resize:none;
+}
+#contactModal .wpcf7-spinner{
+  display:none;
+}
+.modal-backdrop {
+  z-index: 10000 !important;
+}
+.modal {
+  z-index: 10001 !important;
+}
+
 .form-style1 {
     background-color: var(--theme-color);
     max-width: 390px;
