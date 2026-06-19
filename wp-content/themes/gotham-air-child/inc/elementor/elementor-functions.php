@@ -106,6 +106,10 @@ function gt_register_elementor_widgets( $widgets_manager ) {
 	$widgets_manager->register(
     new \GT_Detail_Service_Widget()
 	);
+	require_once __DIR__ . '/widgets/gt-highlights.php';
+	$widgets_manager->register(
+		new \GT_Highlights_Widget()
+	);
 }
 /**
  * ==================================================
