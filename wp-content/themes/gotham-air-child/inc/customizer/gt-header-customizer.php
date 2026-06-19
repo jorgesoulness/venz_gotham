@@ -92,7 +92,7 @@ function gt_header_customizer( $wp_customize ) {
 	*/
 	$socials = [
 		'facebook',
-		'twitter',
+		'google',
 		'linkedin',
 		'instagram',
 	];

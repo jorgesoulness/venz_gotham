@@ -8,7 +8,8 @@
 
 .header-logo {
   // max-width: 270px;
-  width: 170px;
+  // width: 170px;
+  width: 90px;
   padding: 15px 0;
 }
 
@@ -22,7 +23,7 @@
     padding: 18px 0;
     & a {
       & img {
-        width: 100%; max-width: 130px; display: block; padding: 0; margin: 0;
+        width: 100%; max-width: 60px; display: block; padding: 0; margin: 0;
       }
     }
   }
@@ -504,9 +505,7 @@
 @include xl {
   .header-layout1 {
     .header-logo {
-      width: 170px;
-      padding-right: 15px;
-      padding-left: 15px;
+      width: 90px; padding-right: 15px; padding-left: 15px; display: block;
     }
 
     .main-menu > ul > li {
@@ -636,7 +635,7 @@
 
 
   .header-logo {
-      width: 130px;
+      width: 60px;
   }
   
   .header-logo2 {

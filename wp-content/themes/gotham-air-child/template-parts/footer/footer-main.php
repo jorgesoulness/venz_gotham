@@ -69,7 +69,7 @@ for ( $i = 1; $i <= 4; $i++ ) {
 $facebook  = get_theme_mod( 'gt_footer_facebook' );
 $instagram = get_theme_mod( 'gt_footer_instagram' );
 $linkedin  = get_theme_mod( 'gt_footer_linkedin' );
-$twitter   = get_theme_mod( 'gt_footer_twitter' );
+$google   = get_theme_mod( 'gt_footer_google' );
 $youtube   = get_theme_mod( 'gt_footer_youtube' );
 /*
 |--------------------------------------------------------------------------
@@ -181,9 +181,9 @@ $internal_phone_icon = get_theme_mod(
                 <i class="fab fa-facebook-f"></i>
               </a>
             <?php endif; ?>
-            <?php if ( $twitter ) : ?>
-              <a href="<?php echo esc_url( $twitter ); ?>" target="_blank">
-                <i class="fab fa-twitter"></i>
+            <?php if ( $google ) : ?>
+              <a href="<?php echo esc_url( $google ); ?>" target="_blank">
+                <i class="fab fa-google-plus"></i>
               </a>
             <?php endif; ?>
             <?php if ( $linkedin ) : ?>

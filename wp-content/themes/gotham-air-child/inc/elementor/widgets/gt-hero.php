@@ -200,7 +200,7 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
 						<?php endif; ?>
 						<?php if ( ! empty( $slide['video_url'] ) ) : ?>
               <ls-layer style="left:1492px; top:325px;" class="ls-l ls-hide-phone ls-html-layer">
-                <a href="<?php echo esc_url( $slide['video_url'] ); ?>" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
+                <a href="<?php echo esc_url( $slide['button_url']['url'] ); ?>" class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer"><?php echo esc_html( $slide['button_text'] ); ?> <i class="far fa-long-arrow-right"></i></a>
               </ls-layer>
               <ls-layer style="left:1535px; top:242px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer">
                 <a href="<?php echo esc_url( $slide['video_url'] ); ?>" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>

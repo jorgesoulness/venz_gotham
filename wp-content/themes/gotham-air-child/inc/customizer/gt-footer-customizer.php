@@ -142,7 +142,7 @@ function gt_footer_customizer( $wp_customize ) {
 		'facebook',
 		'instagram',
 		'linkedin',
-		'twitter',
+		'google',
 		'youtube',
 	];
 	foreach ( $socials as $social ) {

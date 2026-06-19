@@ -11,7 +11,7 @@ $email   = get_theme_mod( 'gt_top_email' );
 $address = get_theme_mod( 'gt_top_address' );
 
 $facebook  = get_theme_mod( 'gt_facebook' );
-$twitter   = get_theme_mod( 'gt_twitter' );
+$google   = get_theme_mod( 'gt_google' );
 $linkedin  = get_theme_mod( 'gt_linkedin' );
 $instagram = get_theme_mod( 'gt_instagram' );
 
@@ -125,9 +125,9 @@ $btn_url = get_theme_mod(
                 <i class="fab fa-facebook-f"></i>
               </a>
               <?php endif; ?>
-              <?php if ( $twitter ) : ?>
-              <a href="<?php echo esc_url( $twitter ); ?>">
-                <i class="fab fa-twitter"></i>
+              <?php if ( $google ) : ?>
+              <a href="<?php echo esc_url( $google ); ?>">
+                <i class="fab fa-google-plus"></i>
               </a>
               <?php endif; ?>
               <?php if ( $linkedin ) : ?>
