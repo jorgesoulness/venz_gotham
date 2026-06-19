@@ -181,9 +181,9 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
             <h1 style="color:#ffffff; font-size:100px; font-weight:700; font-family:Raleway; left:100px; top:242px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-text-layer" data-ls="offsetxin:-150; durationin:1500; delayin:200;">
               <?php echo esc_html( $slide['title_line_2'] ); ?>
             </h1>
-            <ls-layer style="color:#ffffff; font-family:DM Sans; font-size:18px; top:400px; left:300px; line-height:30px; margin-bottom: 20px;" class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer" data-ls="offsetxin:-150; durationin:1500; delayin:400;">
-              <?php echo wp_kses_post( nl2br( $slide['description'] ) ); ?>
-            </ls-layer>
+            <!-- <ls-layer style="color:#ffffff; font-family:DM Sans; font-size:18px; top:400px; left:300px; line-height:30px; margin-bottom: 20px;" class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer" data-ls="offsetxin:-150; durationin:1500; delayin:400;">
+              <?php //echo wp_kses_post( nl2br( $slide['description'] ) ); ?>
+            </ls-layer> -->
 						<?php if ( ! empty( $slide['button_text'] ) ) : ?>
               <ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em;  line-height: 56px; font-family:DM Sans; font-weight:700; background-color:#fff; left:300px; top:505px; text-align:center; text-transform:uppercase; color:#D23024; font-size:16px;" class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer" data-ls="offsetyin:80; durationin:1500; delayin:500; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
                 <?php echo esc_html( $slide['button_text'] ); ?> <i class="far fa-long-arrow-right"></i>
