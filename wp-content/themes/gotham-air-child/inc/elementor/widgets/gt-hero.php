@@ -111,6 +111,21 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
+			'button_text_two',
+			[
+				'label' => esc_html__( 'Button Text Phone', 'gotham-air-child' ),
+				'type'  => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Learn More',
+			]
+		);
+		$repeater->add_control(
+			'button_url_two',
+			[
+				'label' => esc_html__( 'Button URL PHONE', 'gotham-air-child' ),
+				'type'  => \Elementor\Controls_Manager::URL,
+			]
+		);
+		$repeater->add_control(
 			'video_url',
 			[
 				'label' => esc_html__( 'Video URL', 'gotham-air-child' ),
@@ -187,15 +202,15 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
 						<?php if ( ! empty( $slide['button_text'] ) ) : ?>
               <ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em;  line-height: 56px; font-family:DM Sans; font-weight:700; background-color:#fff; left:300px; top:505px; text-align:center; text-transform:uppercase; color:#D23024; font-size:16px;" class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer" data-ls="offsetyin:80; durationin:1500; delayin:500; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
                 <?php echo esc_html( $slide['button_text'] ); ?> <i class="far fa-long-arrow-right"></i>
-                <a href="<?php echo esc_url( $slide['button_url']['url'] ); ?>" class="inner-hero-link"><span class="sr-only">link</span></a>
+                <a href="<?php //echo esc_url( $slide['button_url']['url'] ); ?>#" class="inner-hero-link" data-bs-toggle="modal" data-bs-target="#contactModal"><span class="sr-only">link</span></a>
               </ls-layer>
               <ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em; line-height: 100px; font-family:DM Sans; font-weight:700; background-color:#fff; left:300px; top:464px; text-align:center; text-transform:uppercase; color:#D23024; font-size:26px;" class="ls-l ls-hide-desktop ls-hide-phone ls-button-layer" data-ls="offsetyin:80; durationin:1500; delayin:500; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
                 <?php echo esc_html( $slide['button_text'] ); ?> <i class="far fa-long-arrow-right"></i>
-                <a href="<?php echo esc_url( $slide['button_url']['url'] ); ?>" class="inner-hero-link"><span class="sr-only">link</span></a>
+                <a href="<?php //echo esc_url( $slide['button_url']['url'] ); ?>#" class="inner-hero-link" data-bs-toggle="modal" data-bs-target="#contactModal"><span class="sr-only">link</span></a>
               </ls-layer>
               <ls-layer style="padding-top:0; padding-bottom:0; padding-right:1em; padding-left:1em; line-height: 140px; font-family:DM Sans; font-weight:700; background-color:#fff; left:100px; top:446px; text-align:center; text-transform:uppercase; color:#D23024; font-size:60px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-button-layer" data-ls="offsetyin:80; durationin:1500; delayin:500; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
                 <?php echo esc_html( $slide['button_text'] ); ?>
-                <a href="<?php echo esc_url( $slide['button_url']['url'] ); ?>" class="inner-hero-link"><span class="sr-only">link</span></a>
+                <a href="<?php //echo esc_url( $slide['button_url']['url'] ); ?>#" class="inner-hero-link" data-bs-toggle="modal" data-bs-target="#contactModal"><span class="sr-only">link</span></a>
               </ls-layer>
 						<?php endif; ?>
 						<?php if ( ! empty( $slide['video_url'] ) ) : ?>
@@ -206,16 +221,23 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
                 <a href="<?php echo esc_url( $slide['video_url'] ); ?>" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
               </ls-layer>
 						<?php endif; ?>
+						<?php if ( ! empty( $slide['button_text_two'] ) ) : ?>
             <!-- <ls-layer style="top:500px; left:650px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;"> -->
-						<ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em;  line-height: 56px; font-family:DM Sans; font-weight:700; background-color:#fff; left:300px; top:505px; text-align:center; text-transform:uppercase; color:#D23024; font-size:16px;" class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer" data-ls="offsetyin:80; durationin:1500; delayin:500; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
-              <a href="tel:123456789" class="ls-icon-btn"><i class="fal fa-phone-alt"></i></a>
+						<ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em;  line-height: 56px; font-family:DM Sans; font-weight:700; background-color:#fff; left:650px; top:505px; text-align:center; text-transform:uppercase; color:#D23024; font-size:16px;" class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
+							<?php echo esc_html( $slide['button_text'] ); ?>
+							<a href="<?php echo esc_url( $slide['button_url_two']['url'] ); ?>" class="inner-hero-link"><span class="sr-only">link</span></a>
             </ls-layer>
-            <ls-layer style="top:452px; left:830px;" class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
-              <a href="tel:123456789" class="ls-icon-btn"><i class="fal fa-phone-alt"></i></a>
+            <!-- <ls-layer style="top:452px; left:830px;" class="ls-l ls-hide-desktop ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;"> -->
+						<ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em; line-height: 100px; font-family:DM Sans; font-weight:700; background-color:#fff; left:652px; top:464px; text-align:center; text-transform:uppercase; color:#D23024; font-size:26px;" class="ls-l ls-hide-desktop ls-hide-phone ls-button-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100; delayin:500; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
+							<?php echo esc_html( $slide['button_text'] ); ?>
+							<a href="<?php echo esc_url( $slide['button_url_two']['url'] ); ?>" class="inner-hero-link"><span class="sr-only">link</span></a>
             </ls-layer>
-            <ls-layer style="top:439px; left:930px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;">
-              <a href="tel:123456789" class="ls-icon-btn"><i class="fal fa-phone-alt"></i></a>
+            <!-- <ls-layer style="top:439px; left:930px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;"> -->
+						<ls-layer style="padding-top:0; padding-bottom:0; padding-right:1em; padding-left:1em; line-height: 140px; font-family:DM Sans; font-weight:700; background-color:#fff; left:549px; top:446px; text-align:center; text-transform:uppercase; color:#D23024; font-size:60px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-button-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
+							<?php echo esc_html( $slide['button_text'] ); ?>
+							<a href="<?php echo esc_url( $slide['button_url_two']['url'] ); ?>" class="inner-hero-link"><span class="sr-only">link</span></a>
             </ls-layer>
+						<?php endif ?>
 					</div>
 				<?php endforeach; ?>
 			</div>
