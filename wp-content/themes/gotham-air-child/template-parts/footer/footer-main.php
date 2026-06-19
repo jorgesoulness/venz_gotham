@@ -119,9 +119,9 @@ $internal_phone_icon = get_theme_mod(
 );
 ?>
 <?php if(is_front_page() || is_page(8)): ?>
-<footer class="footer-wrapper footer-layout3 bg-title">
+<footer class="footer-wrapper footer-layout3">
 <?php else: ?>
-<footer class="footer-wrapper footer-layout3 bg-title background-image" style="background-image: url('<?php echo get_stylesheet_directory_uri(""); ?>/assets/img/bg/footer-bg-1-1.png');">
+<footer class="footer-wrapper footer-layout3 background-image" style="background-image: url('<?php echo get_stylesheet_directory_uri(""); ?>/assets/img/bg/footer-bg-1-1.png');">
 <?php endif; ?>
   <?php if(is_front_page() || is_page(8)): ?>
   <!-- FOOTER TOP -->

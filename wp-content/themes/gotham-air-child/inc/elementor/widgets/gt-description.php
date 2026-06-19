@@ -119,45 +119,34 @@ class GT_Description_Widget extends \Elementor\Widget_Base {
 									<?php echo wp_kses_post( nl2br( $settings['description'] ) ); ?>
 								</p>
 							<?php endif; ?>
-							<?php if (
-								! empty( $settings['button_text'] ) &&
-								! empty( $settings['button_url']['url'] )
-							) : ?>
-								<a
-									href="<?php echo esc_url( $settings['button_url']['url'] ); ?>"
-									class="vs-btn"
-									<?php echo $target . $nofollow; ?>
-								>
-									<?php echo esc_html( $settings['button_text'] ); ?>
-									<i class="far fa-long-arrow-right"></i>
-								</a>
-							<?php endif; ?>
-							<?php if (
-								! empty( $settings['button_text'] ) &&
-								! empty( $settings['button_url']['url'] )
-							) : ?>
-								<a
-									href="<?php echo esc_url( $settings['button_url']['url'] ); ?>"
-									class="vs-btn"
-									<?php echo $target . $nofollow; ?>
-								>
-									<?php echo esc_html( $settings['button_text'] ); ?>
-									<i class="far fa-long-arrow-right"></i>
-								</a>
-							<?php endif; ?>
-							<?php if (
-								! empty( $settings['button_text_two'] ) &&
-								! empty( $settings['button_url_two']['url'] )
-							) : ?>
-								<a
-									href="<?php echo esc_url( $settings['button_url_two']['url'] ); ?>"
-									class="vs-btn"
-									<?php echo $target . $nofollow; ?>
-								>
-									<?php echo esc_html( $settings['button_text_two'] ); ?>
-									<i class="far fa-long-arrow-right"></i>
-								</a>
-							<?php endif; ?>
+							<div class="btnsDescrip">
+								<?php if (
+									! empty( $settings['button_text'] ) &&
+									! empty( $settings['button_url']['url'] )
+								) : ?>
+									<a
+										href="<?php echo esc_url( $settings['button_url']['url'] ); ?>"
+										class="vs-btn"
+										<?php echo $target . $nofollow; ?>
+									>
+										<?php echo esc_html( $settings['button_text'] ); ?>
+										<i class="far fa-long-arrow-right"></i>
+									</a>
+								<?php endif; ?>
+								<?php if (
+									! empty( $settings['button_text_two'] ) &&
+									! empty( $settings['button_url_two']['url'] )
+								) : ?>
+									<a
+										href="<?php echo esc_url( $settings['button_url_two']['url'] ); ?>"
+										class="vs-btn"
+										<?php echo $target . $nofollow; ?>
+									>
+										<?php echo esc_html( $settings['button_text_two'] ); ?>
+										<i class="far fa-long-arrow-right"></i>
+									</a>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>

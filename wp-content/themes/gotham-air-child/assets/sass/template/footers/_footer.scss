@@ -1,6 +1,10 @@
 @use "../../base/variable" as *;
 @use "../../base/mixin" as *;
 
+.footer-wrapper {
+  background-color: var(--theme-color);
+}
+
 .widget-area {
   padding-top: 60px;
   padding-bottom: 60px;

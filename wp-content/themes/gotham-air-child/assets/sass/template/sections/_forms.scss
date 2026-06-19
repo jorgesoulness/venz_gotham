@@ -75,7 +75,12 @@
     display: flex;
     width: 100%;
     max-width: 370px;
-    
+    & .vs-btn {
+        background-color: var(--title-color)!important; color: var(--white-color)!important;
+        &:hover {
+            background-color: var(--theme-color)!important; color: var(--white-color)!important;
+        }
+    }
     input  {
         flex: 1;
         background-color: $white-color;

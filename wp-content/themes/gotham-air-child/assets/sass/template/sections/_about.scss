@@ -1,6 +1,10 @@
 @use '../../base/variable'as *;
 @use '../../base/mixin'as *;
 
+.btnsDescrip {
+    width: 100%; height: auto; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; gap: 20px;
+}
+
 .about-wrap1 {
     padding-top: 430px;
     margin-top: -430px;
