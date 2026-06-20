@@ -17,6 +17,39 @@
 			</button>
 		</form>
 	</div>
+	<?php if(is_page(53) || is_archive()): ?>
+		<?php
+		$parent = get_term_by(
+				'slug',
+				'blog',
+				'category'
+		);
+		if ( $parent ) :
+			$children = get_categories([
+				'parent'     => $parent->term_id,
+				'hide_empty' => true,
+			]);
+		?>
+		<div class="widget widget_categories">
+			<h3 class="widget_title">Categories</h3>
+			<ul>
+				<li>
+					<a href="<?php echo esc_url( get_category_link( $parent->term_id ) ); ?>">
+						<?php echo esc_html( $parent->name ); ?>
+					</a>
+				</li>
+				<?php foreach ( $children as $child ) : ?>
+				<li>
+					<a href="<?php echo esc_url( get_category_link( $child->term_id ) ); ?>">
+						<?php echo esc_html( $child->name ); ?>
+					</a>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+		<?php endif; ?>
+	<?php endif; ?>
+	<?php if(is_single()): ?>
 	<div class="widget">
 		<h3 class="widget_title">
 			Recent Articles
@@ -63,4 +96,5 @@
 			?>
 		</div>
 	</div>
+	<?php endif; ?>
 </aside>

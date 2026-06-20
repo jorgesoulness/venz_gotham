@@ -40,6 +40,21 @@ class GT_Contact_Us_Widget extends Widget_Base {
                 'type' => Controls_Manager::TEXTAREA,
             ]
         );
+        $this->add_control(
+            'title_frm',
+            [
+                'label' => __('Title Form'),
+                'type' => Controls_Manager::TEXT,
+                'default' => 'Contact Information',
+            ]
+        );
+        $this->add_control(
+            'description_frm',
+            [
+                'label' => __('Description Form'),
+                'type' => Controls_Manager::TEXTAREA,
+            ]
+        );
         /*
         |--------------------------------------------------------------------------
         | Contact Boxes
@@ -215,6 +230,18 @@ class GT_Contact_Us_Widget extends Widget_Base {
                         <?php endif; ?>
                     </div>
                     <div class="col-xl-6">
+                      <div class="title-area mb-xl-2 pb-xl-2">
+                      <?php if (!empty($settings['title_frm'])) : ?>
+                        <h2 class="sec-title">
+                            <?php echo esc_html($settings['title_frm']); ?>
+                        </h2>
+                      <?php endif; ?>
+                      <?php if (!empty($settings['description_frm'])) : ?>
+                        <p class="pe-xxl-4">
+                            <?php echo wp_kses_post($settings['description_frm']); ?>
+                        </p>
+                      <?php endif; ?>
+                      </div>
                         <?php if (!empty($settings['form_shortcode'])) : ?>
                             <?php echo do_shortcode($settings['form_shortcode']); ?>
                         <?php endif; ?>
@@ -222,6 +249,15 @@ class GT_Contact_Us_Widget extends Widget_Base {
                 </div>
             </div>
         </section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="title-area mb-xl-2 pb-xl-2 text-center">
+                <h2 class="sec-title">Our Location</h2>
+              </div>
+            </div>
+          </div>
+        </div>
         <?php if (!empty($settings['map_embed'])) : ?>
             <div class="contact-map">
                 <?php echo $settings['map_embed']; ?>

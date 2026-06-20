@@ -171,123 +171,131 @@ class GT_Posts_Blog_Widget extends Widget_Base {
 		?>
 		<section class="space-top space-extra-bottom gt-posts-blog-wrapper">
 			<div class="container">
-
-				<?php if (
-					!empty($settings['subtitle']) ||
-					!empty($settings['title']) ||
-					!empty($settings['description'])
-				) : ?>
-					<div class="row justify-content-center text-center">
-						<div class="col-xl-8">
-							<div class="title-area">
-								<?php if (!empty($settings['subtitle'])) : ?>
-									<span class="sec-subtitle">
-										<?php echo esc_html($settings['subtitle']); ?>
-									</span>
-								<?php endif; ?>
-								<?php if (!empty($settings['title'])) : ?>
-									<h2 class="sec-title">
-										<?php echo esc_html($settings['title']); ?>
-									</h2>
-								<?php endif; ?>
-								<?php if (!empty($settings['description'])) : ?>
-									<p class="sec-text">
-										<?php echo wp_kses_post($settings['description']); ?>
-									</p>
-								<?php endif; ?>
-							</div>
-						</div>
-					</div>
-				<?php endif; ?>
-				<div class="row gt-posts-blog-grid" id="gt-posts-blog-<?php echo esc_attr($widget_id); ?>">
-					<?php
-					$count = 0;
-					if ($query->have_posts()) :
-						while ($query->have_posts()) :
-							$query->the_post();
-							$count++;
-							$reverse = ($count % 2 === 0);
-							?>
-							<div class="col-md-6 col-xl-4 blog-style2">
-								<div class="blog-body">
-									<?php if (!$reverse) : ?>
-										<div class="blog-img">
-											<a href="<?php the_permalink(); ?>">
-												<?php the_post_thumbnail('large'); ?>
-											</a>
-										</div>
+				<div class="row">
+					<div class="col-12">
+					<?php if (
+						!empty($settings['subtitle']) ||
+						!empty($settings['title']) ||
+						!empty($settings['description'])
+					) : ?>
+						<div class="row justify-content-center text-center">
+							<div class="col-xl-8">
+								<div class="title-area">
+									<?php if (!empty($settings['subtitle'])) : ?>
+										<span class="sec-subtitle">
+											<?php echo esc_html($settings['subtitle']); ?>
+										</span>
 									<?php endif; ?>
-									<div class="blog-content">
-										<div class="blog-author">
-											<div class="avater">
-												<?php echo get_avatar(get_the_author_meta('ID'), 60); ?>
-											</div>
-											<div class="author-content">
-												By
-												<span class="name">
-													<?php the_author(); ?>
-												</span>
-											</div>
-										</div>
-										<h3 class="blog-title h5">
-											<a href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
-										</h3>
-										<div class="blog-meta">
-											<a href="<?php the_permalink(); ?>" class="blog-date">
-												<span class="day">
-													<?php echo get_the_date('d'); ?>
-												</span>
-												<?php echo get_the_date('M'); ?>
-											</a>
-											<div class="inside-meta">
-												<a href="<?php comments_link(); ?>">
-													<i class="far fa-comments"></i>
-													<?php echo get_comments_number(); ?>
-												</a>
-												<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
-													<i class="far fa-user"></i>
-													<?php the_author(); ?>
-												</a>
-											</div>
-										</div>
-									</div>
-									<?php if ($reverse) : ?>
-										<div class="blog-img">
-											<a href="<?php the_permalink(); ?>">
-												<?php the_post_thumbnail('large'); ?>
-											</a>
-										</div>
+									<?php if (!empty($settings['title'])) : ?>
+										<h2 class="sec-title">
+											<?php echo esc_html($settings['title']); ?>
+										</h2>
+									<?php endif; ?>
+									<?php if (!empty($settings['description'])) : ?>
+										<p class="sec-text">
+											<?php echo wp_kses_post($settings['description']); ?>
+										</p>
 									<?php endif; ?>
 								</div>
 							</div>
-						<?php
-						endwhile;
-						wp_reset_postdata();
-					endif;
-					?>
-				</div>
-				<?php if (
-					$settings['enable_load_more'] === 'yes'
-					&& $query->max_num_pages > 1
-				) :
-				?>
-					<div class="text-center mt-5">
-						<button
-							class="vs-btn gt-load-more-posts"
-							data-widget-id="<?php echo esc_attr($widget_id); ?>"
-							data-page="1"
-							data-max-pages="<?php echo esc_attr($query->max_num_pages); ?>"
-							data-post-type="<?php echo esc_attr($settings['post_type']); ?>"
-							data-posts-per-page="<?php echo esc_attr($settings['posts_per_page']); ?>"
-							data-order="<?php echo esc_attr($settings['order']); ?>"
-							data-orderby="<?php echo esc_attr($settings['orderby']); ?>"
-						>
-							<?php echo esc_html($settings['load_more_text']); ?>
-						</button>
+						</div>
+					<?php endif; ?>
 					</div>
-				<?php endif; ?>
+					<div class="col-12 col-md-8">
+						<div class="row gt-posts-blog-grid" id="gt-posts-blog-<?php echo esc_attr($widget_id); ?>">
+							<?php
+							$count = 0;
+							if ($query->have_posts()) :
+								while ($query->have_posts()) :
+									$query->the_post();
+									$count++;
+									$reverse = ($count % 2 === 0);
+									?>
+									<div class="col-md-6 col-xl-6 blog-style2">
+										<div class="blog-body">
+											<?php if (!$reverse) : ?>
+												<div class="blog-img">
+													<a href="<?php the_permalink(); ?>">
+														<?php the_post_thumbnail('large'); ?>
+													</a>
+												</div>
+											<?php endif; ?>
+											<div class="blog-content">
+												<div class="blog-author">
+													<div class="avater">
+														<?php echo get_avatar(get_the_author_meta('ID'), 60); ?>
+													</div>
+													<div class="author-content">
+														By
+														<span class="name">
+															<?php the_author(); ?>
+														</span>
+													</div>
+												</div>
+												<h3 class="blog-title h5">
+													<a href="<?php the_permalink(); ?>">
+														<?php the_title(); ?>
+													</a>
+												</h3>
+												<div class="blog-meta">
+													<a href="<?php the_permalink(); ?>" class="blog-date">
+														<span class="day">
+															<?php echo get_the_date('d'); ?>
+														</span>
+														<?php echo get_the_date('M'); ?>
+													</a>
+													<div class="inside-meta">
+														<a href="<?php comments_link(); ?>">
+															<i class="far fa-comments"></i>
+															<?php echo get_comments_number(); ?>
+														</a>
+														<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
+															<i class="far fa-user"></i>
+															<?php the_author(); ?>
+														</a>
+													</div>
+												</div>
+											</div>
+											<?php if ($reverse) : ?>
+												<div class="blog-img">
+													<a href="<?php the_permalink(); ?>">
+														<?php the_post_thumbnail('large'); ?>
+													</a>
+												</div>
+											<?php endif; ?>
+										</div>
+									</div>
+								<?php
+								endwhile;
+								wp_reset_postdata();
+							endif;
+							?>
+						</div>
+						<?php if (
+							$settings['enable_load_more'] === 'yes'
+							&& $query->max_num_pages > 1
+						) :
+						?>
+							<div class="text-center mt-5">
+								<button
+									class="vs-btn gt-load-more-posts"
+									data-widget-id="<?php echo esc_attr($widget_id); ?>"
+									data-page="1"
+									data-max-pages="<?php echo esc_attr($query->max_num_pages); ?>"
+									data-post-type="<?php echo esc_attr($settings['post_type']); ?>"
+									data-posts-per-page="<?php echo esc_attr($settings['posts_per_page']); ?>"
+									data-order="<?php echo esc_attr($settings['order']); ?>"
+									data-orderby="<?php echo esc_attr($settings['orderby']); ?>"
+								>
+									<?php echo esc_html($settings['load_more_text']); ?>
+								</button>
+							</div>
+						<?php endif; ?>
+					</div>
+					<div class="col-12 col-md-4">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
 			</div>
 		</section>
 		<?php
