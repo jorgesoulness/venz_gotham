@@ -213,12 +213,14 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
                 <a href="<?php //echo esc_url( $slide['button_url']['url'] ); ?>#" class="inner-hero-link" data-bs-toggle="modal" data-bs-target="#contactModal"><span class="sr-only">link</span></a>
               </ls-layer>
 						<?php endif; ?>
-						<ls-layer style="left:1492px; top:325px;" class="ls-l ls-hide-phone ls-html-layer">
-                    <a href="https://www.youtube-nocookie.com/embed/ckOWcNLkbZc?si=TnoL4Kr3InHnMwPu" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
-                </ls-layer>
-                <ls-layer style="left:1535px; top:242px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer">
-                    <a href="https://www.youtube-nocookie.com/embed/ckOWcNLkbZc?si=TnoL4Kr3InHnMwPu" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
-                </ls-layer>
+						<?php if ( ! empty( $slide['video_url'] ) ) : ?>
+							<ls-layer style="left:1492px; top:325px;" class="ls-l ls-hide-phone ls-html-layer">
+                <a href="<?php echo esc_url( $slide['video_url'] ); ?>" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
+              </ls-layer>
+              <ls-layer style="left:1535px; top:242px;" class="ls-l ls-hide-desktop ls-hide-tablet ls-html-layer">
+                <a href="<?php echo esc_url( $slide['video_url'] ); ?>" class="play-btn style2 popup-video"><i class="fa fa-play"></i></a>
+              </ls-layer>
+						<?php endif; ?>
 						<?php if ( ! empty( $slide['button_text_two'] ) ) : ?>
             <!-- <ls-layer style="top:500px; left:650px;" class="ls-l ls-hide-tablet ls-hide-phone ls-html-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100;"> -->
 						<ls-layer style="padding-top:0; padding-bottom:0; padding-right:2.48em; padding-left:2.48em;  line-height: 56px; font-family:DM Sans; font-weight:700; background-color:#fff; left:650px; top:505px; text-align:center; text-transform:uppercase; color:#00295B; font-size:16px;" class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer" data-ls="offsetxin:100; delayin:900; offsetxout:100; hover:true; hoverbgcolor:#16171A; hovercolor:#ffffff;">
