@@ -54,9 +54,21 @@ blockquote.vs-quote {
 
 }
 
-.gt-load-more-posts.loading {
+.gt-load-more-posts {
+  padding-top: 50px!important;
+  &.loading {
     opacity: .7;
     pointer-events: none;
+  }
+  & .sec-subtitle {
+    margin-bottom: 25px!important;
+  }
+  @media all and (min-width: 768px) {
+    padding-top: 60px!important;
+    & .sec-subtitle {
+      margin-bottom: 41px!important;
+    }
+  }
 }
 
 
