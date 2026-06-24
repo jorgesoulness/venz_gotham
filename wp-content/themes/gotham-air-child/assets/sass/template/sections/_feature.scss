@@ -64,6 +64,8 @@
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     margin-bottom: 30px;
+    border-top: 1px solid var(--theme-color);
+    border-left: 1px solid var(--theme-color);
 
     .dot-shape {
         position: absolute;
@@ -81,7 +83,8 @@
         padding: 45px 50px 37px 50px;
         transition: all ease 0.4s;
         background-color: transparent;
-        border: 1px solid var(--theme-color);
+        border-right: 1px solid var(--theme-color);
+        border-bottom: 1px solid var(--theme-color);
 
         &:hover {
             background-color: $title-color;
