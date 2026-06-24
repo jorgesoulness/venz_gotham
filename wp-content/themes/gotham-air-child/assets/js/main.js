@@ -133,8 +133,8 @@
   $(".vs-menu-wrapper").vsmobilemenu();
 
   /*---------- 04. Sticky fix ----------*/
-  // var lastScrollTop = "";
-  // var scrollToTopBtn = ".scrollToTop";
+  var lastScrollTop = "";
+  var scrollToTopBtn = ".scrollToTop";
 
   // function stickyMenu($targetMenu, $toggleClass, $parentClass) {
   //   var st = $(window).scrollTop();
