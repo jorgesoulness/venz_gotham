@@ -52,15 +52,13 @@ blockquote.vs-quote {
     z-index: 1;
   }
 }
-
 .gt-load-more-posts {
   padding-top: 50px!important;
   &.loading {
-    opacity: .7;
-    pointer-events: none;
+    opacity: .7; pointer-events: none;
   }
   & .sec-subtitle {
-    margin-bottom: 25px!important;
+    margin-bottom: 24px!important;
   }
   @media all and (min-width: 768px) {
     padding-top: 60px!important;
@@ -72,9 +70,7 @@ blockquote.vs-quote {
 
 .blog-meta {
   margin-top: -0.4em;
-
-  span,
-  a {
+  span, a {
     display: inline-block;
     margin-right: 16px;
     padding-right: 20px;
