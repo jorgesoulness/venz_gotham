@@ -37,6 +37,7 @@
 .brand-style1 {
 
     .brand-container {
+      & .slick-dots { margin: 50px 0 0 0; }
         @media (min-width: 1199px) {
             max-width: var(--main-container);
             margin-left: auto;
