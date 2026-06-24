@@ -81,6 +81,7 @@
         padding: 45px 50px 37px 50px;
         transition: all ease 0.4s;
         background-color: transparent;
+        border: 1px solid var(--theme-color);
 
         &:hover {
             background-color: $title-color;
