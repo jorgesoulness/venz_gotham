@@ -148,10 +148,8 @@ class GT_Content_About_Us_Widget extends \Elementor\Widget_Base {
 								<?php endif; ?>
 							</div>
 						</div>
-						<?php if ( ! empty( $settings['button_text'] ) && ! empty( $settings['button_url']['url'] ) ) : ?>
-							<a href="<?php echo esc_url( $settings['button_url']['url'] ); ?>" class="vs-btn mb-5 mb-xl-0"
-								<?php echo $target . $nofollow; ?>
-							>
+						<?php if (!empty( $settings['button_text'] )) : ?>
+							<a href="#" class="vs-btn mb-5 mb-xl-0" data-bs-toggle="modal" data-bs-target="#contactModal">
 								<?php echo esc_html( $settings['button_text'] ); ?>
 								<i class="far fa-long-arrow-right"></i>
 							</a>
