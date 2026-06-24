@@ -156,11 +156,11 @@
   }
   $(window).on("scroll", function () {
     stickyMenu($(".sticky-active"), "active", "will-sticky");
-    if ($(this).scrollTop() > 500) {
-      $(scrollToTopBtn).addClass("show");
-    } else {
-      $(scrollToTopBtn).removeClass("show");
-    }
+    // if ($(this).scrollTop() > 500) {
+    //   $(scrollToTopBtn).addClass("show");
+    // } else {
+    //   $(scrollToTopBtn).removeClass("show");
+    // }
   });
 
   /*---------- 05. Scroll To Top ----------*/
