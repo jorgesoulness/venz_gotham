@@ -163,34 +163,33 @@
   //   }
   // });
   function stickyMenu() {
-
     var $header = $('.vs-header');
-
     if (!$header.length) {
-        return;
+      return;
     }
-
     var scrollTop = $(window).scrollTop();
-
     var triggerPoint =
-        $header.offset().top +
-        $header.outerHeight();
-
+      $header.offset().top +
+      $header.outerHeight();
     if (scrollTop >= triggerPoint) {
-        $('.sticky-header-wrap').addClass('will-sticky');
-        $('.sticky-active').addClass('active');
+      $('.sticky-header-wrap').addClass('will-sticky');
+      $('.sticky-active').addClass('active');
     } else {
-        $('.sticky-header-wrap').removeClass('will-sticky');
-        $('.sticky-active').removeClass('active');
+      $('.sticky-header-wrap').removeClass('will-sticky');
+      $('.sticky-active').removeClass('active');
     }
   }
-
   $(window).on('scroll', function () {
-      stickyMenu();
+    stickyMenu();
+    if ($(this).scrollTop() > 500) {
+      $(scrollToTopBtn).addClass("show");
+    } else {
+      $(scrollToTopBtn).removeClass("show");
+    }
   });
 
   $(window).on('load', function () {
-      stickyMenu();
+    stickyMenu();
   });
 
   /*---------- 05. Scroll To Top ----------*/
@@ -336,9 +335,11 @@
     }
 
     vsSlide.slick({
-      dots: d("dots") ? true : false,
+      dots: true,
+      // dots: d("dots") ? true : false,
       fade: d("fade") ? true : false,
-      arrows: d("arrows") ? true : false,
+      // arrows: d("arrows") ? true : false,
+      arrows: true,
       speed: d("speed") ? d("speed") : 1000,
       asNavFor: d("asnavfor") ? d("asnavfor") : false,
       autoplay: d("autoplay") == false ? false : false,
