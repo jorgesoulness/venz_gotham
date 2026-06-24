@@ -26,7 +26,7 @@ $btn_url = get_theme_mod(
 );
 ?>
 	<div class="sticky-header-wrap sticky-wrap sticky-header">
-    <div class="sticky-active active">
+    <div class="sticky-active">
       <div class="container position-relative">
         <div class="row align-items-center">
           <div class="col-5 col-md-3">

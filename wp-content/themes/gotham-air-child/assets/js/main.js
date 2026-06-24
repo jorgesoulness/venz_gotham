@@ -133,34 +133,64 @@
   $(".vs-menu-wrapper").vsmobilemenu();
 
   /*---------- 04. Sticky fix ----------*/
-  var lastScrollTop = "";
-  var scrollToTopBtn = ".scrollToTop";
+  // var lastScrollTop = "";
+  // var scrollToTopBtn = ".scrollToTop";
 
-  function stickyMenu($targetMenu, $toggleClass, $parentClass) {
-    var st = $(window).scrollTop();
-    var height = $targetMenu.css("height");
-    $targetMenu.parent().css("min-height", height);
-    if ($(window).scrollTop() > 800) {
-      $targetMenu.parent().addClass($parentClass);
+  // function stickyMenu($targetMenu, $toggleClass, $parentClass) {
+  //   var st = $(window).scrollTop();
+  //   var height = $targetMenu.css("height");
+  //   $targetMenu.parent().css("min-height", height);
+  //   if ($(window).scrollTop() > 800) {
+  //     $targetMenu.parent().addClass($parentClass);
 
-      if (st > lastScrollTop) {
-        $targetMenu.removeClass($toggleClass);
-      } else {
-        $targetMenu.addClass($toggleClass);
-      }
-    } else {
-      $targetMenu.parent().css("min-height", "").removeClass($parentClass);
-      $targetMenu.removeClass($toggleClass);
+  //     if (st > lastScrollTop) {
+  //       $targetMenu.removeClass($toggleClass);
+  //     } else {
+  //       $targetMenu.addClass($toggleClass);
+  //     }
+  //   } else {
+  //     $targetMenu.parent().css("min-height", "").removeClass($parentClass);
+  //     $targetMenu.removeClass($toggleClass);
+  //   }
+  //   lastScrollTop = st;
+  // }
+  // $(window).on("scroll", function () {
+  //   stickyMenu($(".sticky-active"), "active", "will-sticky");
+  //   if ($(this).scrollTop() > 500) {
+  //     $(scrollToTopBtn).addClass("show");
+  //   } else {
+  //     $(scrollToTopBtn).removeClass("show");
+  //   }
+  // });
+  function stickyMenu() {
+
+    var $header = $('.vs-header');
+
+    if (!$header.length) {
+        return;
     }
-    lastScrollTop = st;
+
+    var scrollTop = $(window).scrollTop();
+
+    var triggerPoint =
+        $header.offset().top +
+        $header.outerHeight();
+
+    if (scrollTop >= triggerPoint) {
+        $('.sticky-header-wrap').addClass('will-sticky');
+        $('.sticky-active').addClass('active');
+    } else {
+        $('.sticky-header-wrap').removeClass('will-sticky');
+        $('.sticky-active').removeClass('active');
+    }
   }
-  $(window).on("scroll", function () {
-    stickyMenu($(".sticky-active"), "active", "will-sticky");
-    // if ($(this).scrollTop() > 500) {
-    //   $(scrollToTopBtn).addClass("show");
-    // } else {
-    //   $(scrollToTopBtn).removeClass("show");
-    // }
+
+  $(window).on('scroll', function () {
+      stickyMenu();
+  });
+
+  $(window).on('load', function () {
+      stickyMenu();
   });
 
   /*---------- 05. Scroll To Top ----------*/
