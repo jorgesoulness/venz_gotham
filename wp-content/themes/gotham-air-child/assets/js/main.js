@@ -414,8 +414,10 @@
         {
           breakpoint: 576,
           settings: {
-            arrows: d("xs-arrows") ? true : false,
-            dots: d("xs-dots") ? true : false,
+            // arrows: d("xs-arrows") ? true : false,
+            // dots: d("xs-dots") ? true : false,
+            arrows: true,
+            dots: true,
             slidesToShow: d("xs-slide-show") ? d("xs-slide-show") : 1,
             centerMode: d("xs-center-mode") ? d("xs-center-mode") : false,
             centerPadding: 0,
