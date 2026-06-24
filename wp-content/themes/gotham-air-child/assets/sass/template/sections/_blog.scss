@@ -53,10 +53,12 @@ blockquote.vs-quote {
   }
 }
 .gt-load-more-posts {
-  padding-top: 50px!important;
   &.loading {
     opacity: .7; pointer-events: none;
   }
+}
+.gt-posts-blog-wrapper {
+  padding-top: 50px!important;
   & .sec-subtitle {
     margin-bottom: 24px!important;
   }
