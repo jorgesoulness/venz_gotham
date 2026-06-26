@@ -150,7 +150,7 @@ class GT_Hero_Widget extends \Elementor\Widget_Base {
 		}
 		?>
 		<section class="vs-hero-wrapper hero-layout1 position-relative">
-			<div class="vs-hero-carousel" data-height="740" data-height-tablet="700" data-height-mobile="900" data-container="1900" data-slidertype="responsive">
+			<div class="vs-hero-carousel" data-height="740" data-height-tablet="800" data-height-mobile="900" data-container="1900" data-slidertype="responsive">
 				<?php foreach ( $settings['slides'] as $slide ) : ?>
 					<div class="ls-slide" data-ls="duration:8000; transition2d:5; kenburnszoom:in; kenburnsscale:1.1;">
 						<img width="1921" height="750" src="<?php echo esc_url( $slide['background_image']['url'] ); ?>" class="ls-bg" alt="" decoding="async">

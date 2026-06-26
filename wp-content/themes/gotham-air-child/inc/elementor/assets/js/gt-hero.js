@@ -21,7 +21,7 @@
             // height: hero.data('height'),
             height: getHeroHeight(hero),
             layersContainer: hero.data('container'),
-            skinsPath: 'layerslider/skins/'
+            skinsPath: window.pathFiles+'layerslider/skins/'
         });
     };
     $(window).on('elementor/frontend/init', function () {

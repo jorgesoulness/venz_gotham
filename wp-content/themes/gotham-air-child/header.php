@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <?php wp_head(); ?>
+    <script>
+      window.pathFiles = "<?php echo get_stylesheet_directory_uri(''); ?>/";
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
