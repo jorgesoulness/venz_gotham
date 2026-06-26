@@ -224,12 +224,14 @@
     }
 
     function getHeroHeight(hero) {
-      console.log('Slide hero: ' + hero.data('height'),  hero.data('height-mobile'),  hero.data('height-tablet'));
+      console.log('Slide hero: ' + hero.data('height'));
       let height = hero.data('height') || 1080;
       if (window.innerWidth <= 767) {
+        console.log('Slide hero mobile: ' + hero.data('height-mobile'));
         height = hero.data('height-mobile') || height;
       }
       else if (window.innerWidth <= 991) {
+        console.log('Slide hero tablet: ' +  hero.data('height-tablet'));
         height = hero.data('height-tablet') || height;
       }
       return height;
