@@ -1,4 +1,15 @@
 (function ($) {
+    function getHeroHeight(hero) {
+        console.log('Widget hero: ' + hero);
+        let height = hero.data('height') || 1080;
+        if (window.innerWidth <= 767) {
+            height = hero.data('height-mobile') || height;
+        }
+        else if (window.innerWidth <= 991) {
+            height = hero.data('height-tablet') || height;
+        }
+        return height;
+    }
     var initHero = function ($scope) {
         var hero = $scope.find('.vs-hero-carousel');
         if (!hero.length) {
@@ -7,7 +18,8 @@
         hero.layerSlider({
             allowRestartOnResize: true,
             type: 'responsive',
-            height: hero.data('height'),
+            // height: hero.data('height'),
+            height: getHeroHeight(hero),
             layersContainer: hero.data('container'),
             skinsPath: 'layerslider/skins/'
         });

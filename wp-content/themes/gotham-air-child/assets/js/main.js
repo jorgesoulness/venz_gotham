@@ -217,10 +217,23 @@
   /*----------- 07. Hero Slider Active ----------*/
   $(".vs-hero-carousel").each(function () {
     var vsHslide = $(this);
-
+    
     // Get Data From Dom
     function d(data) {
       return vsHslide.data(data);
+    }
+
+    function getHeroHeight(hero) {
+      console.log('Slide hero: ' + hero);
+      
+      let height = hero.data('height') || 1080;
+      if (window.innerWidth <= 767) {
+        height = hero.data('height-mobile') || height;
+      }
+      else if (window.innerWidth <= 991) {
+        height = hero.data('height-tablet') || height;
+      }
+      return height;
     }
 
     vsHslide.layerSlider({
@@ -235,7 +248,8 @@
       navButtons: d("navbuttons") ? true : false,
       loop: d("loop") === false ? false : true,
       autostart: d("autostart") ? true : false,
-      height: d("height") ? d("height") : 1080,
+      // height: d("height") ? d("height") : 1080,
+      height: getHeroHeight(vsHslide),
       responsiveUnder: d("responsiveunder") ? d("responsiveunder") : 1220,
       layersContainer: d("container") ? d("container") : 1220,
       showCircleTimer: d("showcircletimer") ? true : false,
