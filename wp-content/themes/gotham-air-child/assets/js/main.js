@@ -254,7 +254,7 @@
       responsiveUnder: d("responsiveunder") ? d("responsiveunder") : 1220,
       layersContainer: d("container") ? d("container") : 1220,
       showCircleTimer: d("showcircletimer") ? true : false,
-      skinsPath: "layerslider/skins/",
+      skinsPath: window.pathFiles + "layerslider/skins/",
       thumbnailNavigation: d("thumbnailnavigation") === false ? false : true,
     });
   });
