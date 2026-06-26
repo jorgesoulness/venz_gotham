@@ -224,8 +224,7 @@
     }
 
     function getHeroHeight(hero) {
-      console.log('Slide hero: ' + hero);
-      
+      console.log('Slide hero: ' + hero.data('height'),  hero.data('height-mobile'),  hero.data('height-tablet'));
       let height = hero.data('height') || 1080;
       if (window.innerWidth <= 767) {
         height = hero.data('height-mobile') || height;
