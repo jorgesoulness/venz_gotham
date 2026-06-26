@@ -78,8 +78,7 @@
 
 @include lg {
     .process-style1 {
-    margin: 15px 0 50px 15px;
-    padding: 30px 15px 28px 15px;
+    margin: 15px 0 50px 15px; padding: 30px 15px 28px 15px; height: auto;
 
     &:before {
         left: -15px;
